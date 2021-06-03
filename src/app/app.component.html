@@ -29,22 +29,31 @@
         </div>
         
     </div>
-  
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-1">
+
    <div *ngFor="let article of uiArticleArray">         
          
-        <div class="card">
-            <img class="card-img-top" [src]="article.image" style="height: 150px;width: 150px;" alt="Card image cap">
-            <div class="card-body">
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img [src]="article.image" [ngStyle]="{'height':'100%','width':'100%'}" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body" >
               <h5 class="card-title">{{article.owner.firstName}}</h5>
-              <p class="card-text">{{article.text}}</p>
-              <p class="card-text"><small class="text-muted">Last updated {{article.publishDate | date:'short'}}</small></p>
-              <p>{{article.likes}}</p>
+              <p class="card-text" style="height: 120px;overflow: hidden;">{{article.text}}</p>
+              <p class="list-group-item text-danger">Tags: {{article.tags}}</p>
+              <p class="card-text" style="height: 50px;overflow: hidden;"><small class="text-muted"> 
+               Last updated  {{article.publishDate}}
+              </small></p>
             </div>
           </div>
-
+        </div>
+      </div>
    
        
      </div> 
+     </div>
 
 </div>
 
