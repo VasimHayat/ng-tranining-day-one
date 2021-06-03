@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppFilterPipe } from './core/pipes/app-filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppFilterPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
